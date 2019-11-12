@@ -246,15 +246,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/UnityExport/Classes",
-					"$(SRCROOT)/UnityExport/Classes/Unity",
-					"$(SRCROOT)/UnityExport/Libraries",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/../UnityExport/**";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -263,15 +259,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/UnityExport/Classes",
-					"$(SRCROOT)/UnityExport/Classes/Unity",
-					"$(SRCROOT)/UnityExport/Libraries",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/../UnityExport/**";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
