@@ -248,9 +248,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../../ios/UnityExport/Classes",
-					"$(SRCROOT)/../../../ios/UnityExport/Classes/Unity",
-					"$(SRCROOT)/../../../ios/UnityExport/Libraries",
+					"$(SRCROOT)/UnityExport/Classes",
+					"$(SRCROOT)/UnityExport/Classes/Unity",
+					"$(SRCROOT)/UnityExport/Libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -265,9 +265,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../../ios/UnityExport/Classes",
-					"$(SRCROOT)/../../../ios/UnityExport/Classes/Unity",
-					"$(SRCROOT)/../../../ios/UnityExport/Libraries",
+					"$(SRCROOT)/UnityExport/Classes",
+					"$(SRCROOT)/UnityExport/Classes/Unity",
+					"$(SRCROOT)/UnityExport/Libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
