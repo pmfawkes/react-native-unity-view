@@ -13,6 +13,7 @@
     "unity"
   ],
   "author": "xzper",
+  "homepage": "https://github.com/f111fei/react-native-unity-view/",
   "license": "MIT",
   "devDependencies": {
     "@types/prop-types": "^15.5.2",
