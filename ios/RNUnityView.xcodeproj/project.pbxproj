@@ -247,18 +247,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../**",
-					"$(SRCROOT)/UnityExport/**",
-					"$(SRCROOT)/../UnityExport/**",
-					"$(SRCROOT)/UnityExport/Classes",
-					"$(SRCROOT)/../UnityExport/Classes",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../ios/UnityExport/**";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../ios/UnityExport/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../** $(SRCROOT)/UnityExport/** $(SRCROOT)/../UnityExport/** $(SRCROOT)/UnityExport/Classes $(SRCROOT)/../UnityExport/Classes";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -268,18 +262,12 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../**",
-					"$(SRCROOT)/UnityExport/**",
-					"$(SRCROOT)/../UnityExport/**",
-					"$(SRCROOT)/UnityExport/Classes",
-					"$(SRCROOT)/../UnityExport/Classes",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../ios/UnityExport/**";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../ios/UnityExport/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../** $(SRCROOT)/UnityExport/** $(SRCROOT)/../UnityExport/** $(SRCROOT)/UnityExport/Classes $(SRCROOT)/../UnityExport/Classes";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
