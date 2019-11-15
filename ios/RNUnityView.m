@@ -6,6 +6,10 @@
 //  Copyright © 2018年 xzper. All rights reserved.
 //
 
+echo "--- LOGGING FROM RNUnityView.m"
+echo "SRCROOT: ${SRCROOT}"
+echo "PROJECT_DIR: ${PROJECT_DIR}"
+
 #import "RNUnityView.h"
 
 @implementation RNUnityView
