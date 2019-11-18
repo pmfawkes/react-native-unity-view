@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
 
   s.source       = { :git => 'https://github.com/pmfawkes/react-native-unity-view.git', :branch => 'add-podspec' }
-  s.source_files  = 'ios/**/*.{h,m}'
+  s.source_files  = 'ios/**/*.{h,m,mm}'
 
   s.dependency 'React'
 end
