@@ -78,7 +78,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B593B682052A47600CBB34F /* Build configuration list for PBXNativeTarget "RNUnityView" */;
 			buildPhases = (
-				D4364C3C237F1A8A003176A8 /* ShellScript */,
 				1B593B5B2052A47600CBB34F /* Sources */,
 				1B593B5C2052A47600CBB34F /* Frameworks */,
 				1B593B5D2052A47600CBB34F /* CopyFiles */,
@@ -123,26 +122,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D4364C3C237F1A8A003176A8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"--- LOGGING FROM RNUnityView.xcodeproj --\"\necho \"SRCROOT: ${SRCROOT}\"\necho \"PROJECT_DIR: ${PROJECT_DIR}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B593B5B2052A47600CBB34F /* Sources */ = {
@@ -267,19 +246,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../ios/UnityExport/**",
-					"$(PROJECT_DIR)/UnityExport/**",
-					"$(PROJECT_DIR)/UnityExport/Classes",
-					"$(PROJECT_DIR)/../../../ios/UnityExport/**",
-					"$(PROJECT_DIR)/../../../ios/UnityExport/Classes",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../../ios/UnityExport/Classes",
+					"$(SRCROOT)/../../../ios/UnityExport/Classes/Unity",
+					"$(SRCROOT)/../../../ios/UnityExport/Libraries",
 				);
-				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -288,19 +263,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../ios/UnityExport/**",
-					"$(PROJECT_DIR)/UnityExport/**",
-					"$(PROJECT_DIR)/UnityExport/Classes",
-					"$(PROJECT_DIR)/../../../ios/UnityExport/**",
-					"$(PROJECT_DIR)/../../../ios/UnityExport/Classes",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../../ios/UnityExport/Classes",
+					"$(SRCROOT)/../../../ios/UnityExport/Classes/Unity",
+					"$(SRCROOT)/../../../ios/UnityExport/Libraries",
 				);
-				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
