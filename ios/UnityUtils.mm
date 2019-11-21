@@ -1,4 +1,4 @@
-#include "RegisterMonoModules.h"
+// #include "RegisterMonoModules.h"
 #include "RegisterFeatures.h"
 #include <csignal>
 #import <UIKit/UIKit.h>
@@ -20,6 +20,7 @@ void UnityInitTrampoline();
 
 extern "C" void InitArgs(int argc, char* argv[])
 {
+      NSLog(@"UUUUUUUUUUUU In UnityUtils.InitArgs");
     g_argc = argc;
     g_argv = argv;
 }
@@ -31,19 +32,20 @@ extern "C" bool UnityIsInited()
 
 extern "C" void InitUnity()
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.InitUnity");
     if (unity_inited) {
         return;
     }
     unity_inited = true;
 
-    UnityInitStartupTime();
+    // UnityInitStartupTime();
     
     @autoreleasepool
     {
         UnityInitTrampoline();
         UnityInitRuntime(g_argc, g_argv);
         
-        RegisterMonoModules();
+        // RegisterMonoModules();
         NSLog(@"-> registered mono modules %p\n", &constsection);
         RegisterFeatures();
         
@@ -57,11 +59,13 @@ extern "C" void InitUnity()
 
 extern "C" void UnityPostMessage(NSString* gameObject, NSString* methodName, NSString* message)
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.UnityPostMessage");
     UnitySendMessage([gameObject UTF8String], [methodName UTF8String], [message UTF8String]);
 }
 
 extern "C" void UnityPauseCommand()
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.UnityPauseCommand");
     dispatch_async(dispatch_get_main_queue(), ^{
         UnityPause(1);
     });
@@ -69,6 +73,7 @@ extern "C" void UnityPauseCommand()
 
 extern "C" void UnityResumeCommand()
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.UnityResumeCommand");
     dispatch_async(dispatch_get_main_queue(), ^{
         UnityPause(0);
     });
@@ -81,11 +86,13 @@ static BOOL _isUnityReady = NO;
 
 + (BOOL)isUnityReady
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.isUnityReady");
     return _isUnityReady;
 }
 
 + (void)handleAppStateDidChange:(NSNotification *)notification
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.handleAppStateDidChange");
     if (!_isUnityReady) {
         return;
     }
@@ -126,6 +133,7 @@ static BOOL _isUnityReady = NO;
 
 + (void)createPlayer:(void (^)(void))completed
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.createPlayer");
     if (_isUnityReady) {
         completed();
         return;
@@ -161,6 +169,7 @@ static BOOL _isUnityReady = NO;
 
 extern "C" void onUnityMessage(const char* message)
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.onUnityMessage");
     for (id<UnityEventListener> listener in mUnityEventListeners) {
         [listener onMessage:[NSString stringWithUTF8String:message]];
     }
@@ -168,6 +177,7 @@ extern "C" void onUnityMessage(const char* message)
 
 + (void)addUnityEventListener:(id<UnityEventListener>)listener
 {
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.addUnityEventListener");
     [mUnityEventListeners addObject:listener];
 }
 
