@@ -38,14 +38,14 @@ extern "C" void InitUnity()
     }
     unity_inited = true;
 
-    // UnityInitStartupTime();
+    UnityInitStartupTime();
     
     @autoreleasepool
     {
         UnityInitTrampoline();
         UnityInitRuntime(g_argc, g_argv);
         
-        // RegisterMonoModules();
+        RegisterMonoModules();
         NSLog(@"-> registered mono modules %p\n", &constsection);
         RegisterFeatures();
         
