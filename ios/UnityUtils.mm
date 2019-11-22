@@ -59,7 +59,7 @@ extern "C" void InitUnity()
 
 extern "C" void UnityPostMessage(NSString* gameObject, NSString* methodName, NSString* message)
 {
-    NSLog(@"UUUUUUUUUUUU In UnityUtils.UnityPostMessage");
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.UnityPostMessage, message: %@", message);
     UnitySendMessage([gameObject UTF8String], [methodName UTF8String], [message UTF8String]);
 }
 
@@ -169,7 +169,8 @@ static BOOL _isUnityReady = NO;
 
 extern "C" void onUnityMessage(const char* message)
 {
-    NSLog(@"UUUUUUUUUUUU In UnityUtils.onUnityMessage");
+    NSLog(@"UUUUUUUUUUUU In UnityUtils.onUnityMessage, message: %@", message);
+
     for (id<UnityEventListener> listener in mUnityEventListeners) {
         [listener onMessage:[NSString stringWithUTF8String:message]];
     }
