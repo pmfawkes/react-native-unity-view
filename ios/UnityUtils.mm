@@ -137,6 +137,7 @@ static BOOL _isUnityReady = NO;
     }];
     
     if (UnityIsInited()) {
+        completed();
         return;
     }
     
